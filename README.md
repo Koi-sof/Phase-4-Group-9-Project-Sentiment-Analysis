@@ -18,6 +18,8 @@ This project demonstrates the process of building a **Sentiment Analysis** model
   - **Transformers**: For advanced NLP techniques using pre-trained models.
   - **Joblib**: For saving and loading models.
   - **Torch**: For deep learning (if applicable).
+ 
+Here is the link to our <a href="https://www.canva.com/design/DAG2KWhNTtQ/eAIzSJ-Xy3q_H3pmLUROBw/edit?utm_content=DAG2KWhNTtQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">presentation slides</a>
 
 ## 1. Business Understanding
 
@@ -133,3 +135,5 @@ For further improvement, **pre-trained deep learning models** from the **Transfo
 ## 7. Conclusion
 
 The project successfully developed a sentiment analysis model for classifying tweets about Apple and Google products. By using **Logistic Regression**, **LinearSVC**, and **KNN**, the model was able to predict the sentiment of tweets with reasonable accuracy. Future work could involve fine-tuning the pre-trained transformer models to achieve even better performance.
+
+
