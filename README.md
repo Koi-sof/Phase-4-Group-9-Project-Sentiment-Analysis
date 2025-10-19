@@ -40,18 +40,12 @@ Apple and Google heavily rely on the perception of their customers towards their
 
 ## 2. Data Understanding
 
-### 2.1 Initial Data Loading and Inspection
+The dataset contains tweets with text about Apple and Google products. The sentiment labels are classified into three categories: **positive**, **neutral**, and **negative**. This dataset is essential for training and testing the sentiment analysis models.
 
-The dataset is loaded using **pandas**, and the initial inspection reveals that it contains tweets along with their respective sentiment labels. The dataset is provided in a CSV file format (`judge-1377884607_tweet_product_company.csv`).
+### 2.1 Important Visualizations
+### 2.1 Word Cloud Visualization
 
-### 2.2 Data Overview
-
-After loading the data, the following commands provide insight into the dataset:
-
-df.head()  # Show first few rows of the dataset
-df.info()  # Dataset information (types and nulls)
-df.describe()  # Statistical summary of the dataset
-df.shape  # Dimensions of the dataset
+A **WordCloud** is generated to visualize the most frequent terms in the dataset. This helps in understanding which words are most commonly used in tweets related to Apple and Google. 
 
 ## 3. Data Preprocessing
 
@@ -61,10 +55,6 @@ In this project, the text data undergoes several preprocessing steps, including:
 - **Tokenization**: Breaking down the text into individual words.
 - **Removing stop words**: Filtering out common but non-informative words (e.g., "the", "and").
 - **Lemmatization**: Reducing words to their base or root form.
-
-### 3.1 Word Cloud Visualization
-
-A **WordCloud** is generated to visualize the most frequent terms in the dataset. This helps in understanding which words are most commonly used in tweets related to Apple and Google.
 
 ## 4. Model Building
 
@@ -98,10 +88,19 @@ The models are evaluated using the following metrics:
 
 The models were evaluated on the test set, and their performances were compared. The results showed that the **LinearSVC** model performed the best in terms of F1-score, closely followed by **Logistic Regression**.
 
-Example of evaluation for the **LinearSVC** model:
+SVM with N-grams and Balanced Classes Results:
 
-classification_report(y_test, y_pred)
-ConfusionMatrixDisplay(confusion_matrix(y_test, y_pred)).plot()
+```
+                  precision    recall  f1-score   support
+
+Negative emotion       0.90      0.99      0.94      1106
+ Neutral emotion       0.78      0.69      0.73      1106
+Positive emotion       0.78      0.79      0.78      1107
+
+        accuracy                           0.82      3319
+       macro avg       0.82      0.82      0.82      3319
+    weighted avg       0.82      0.82      0.82      3319
+```
 
 ## 6. Advanced Techniques (Optional)
 
@@ -110,7 +109,3 @@ For further improvement, **pre-trained deep learning models** from the **Transfo
 ## 7. Conclusion
 
 The project successfully developed a sentiment analysis model for classifying tweets about Apple and Google products. By using **Logistic Regression**, **LinearSVC**, and **KNN**, the model was able to predict the sentiment of tweets with reasonable accuracy. Future work could involve fine-tuning the pre-trained transformer models to achieve even better performance.
-
-## Dataset
-
-The dataset contains tweets with text about Apple and Google products. The labels are classified into three categories: **positive**, **neutral**, and **negative**. This dataset is essential for training and testing the sentiment analysis models.
