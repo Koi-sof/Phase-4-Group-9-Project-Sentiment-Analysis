@@ -5,7 +5,7 @@
 This project demonstrates the process of building a **Sentiment Analysis** model on a dataset of tweets related to Apple and Google products. The objective is to classify the sentiment of tweets into three categories: **positive**, **neutral**, and **negative**. This project covers multiple stages of data analysis, from understanding the business problem to preparing data, training machine learning models, evaluating their performance, and visualizing the results.
 
 ## Project Overview
-S
+
 - **Title**: Sentiment Analysis on Tweets
 - **Language**: Python
 - **Libraries Used**:
