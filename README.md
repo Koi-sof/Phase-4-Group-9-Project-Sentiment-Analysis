@@ -31,21 +31,43 @@ Apple and Google heavily rely on the perception of their customers towards their
 
 ### 1.3 Objectives
 
-- **Main Objective**: Build an accurate NLP model to classify tweets mentioning Apple and Google products into sentiment categories: **positive**, **neutral**, and **negative**.
-  
-- **Specific Objectives**:
-  - Explore and analyze tweet data to provide actionable insights.
-  - Preprocess the data using NLP techniques like tokenization and lemmatization.
-  - Evaluate the performance of the classifiers using appropriate metrics (e.g., accuracy, confusion matrix, F1 score).
+**Main Objective**: Build an accurate NLP model to classify tweets mentioning Apple and Google products into sentiment categories: **positive**, **neutral**, and **negative**.
+
+ **Specific Objectives**:
+ 
+- To explore and analyze the tweet data between the two companies
+
+- To preprocess the data using Natural Language Processing techniques.
+    
+- To develop and evaluate classifier performance using appropriate metrics(e.g., accuracy, confusion matrix, F1 score).
+
+- To provide actionable, data-driven insights and recommendations
+
+- To successfully deploy the model into the production environment
+
 
 ## 2. Data Understanding
 
 The dataset contains tweets with text about Apple and Google products. The sentiment labels are classified into three categories: **positive**, **neutral**, and **negative**. This dataset is essential for training and testing the sentiment analysis models.
 
 ### 2.1 Important Visualizations
-### 2.1 Word Cloud Visualization
 
-A **WordCloud** is generated to visualize the most frequent terms in the dataset. This helps in understanding which words are most commonly used in tweets related to Apple and Google. 
+#### 2.1.1 Distribution of Sentiment Class
+
+<img width="631" height="483" alt="image" src="https://github.com/user-attachments/assets/bd6c0282-ce3f-490b-a400-4b2632d66d89" />
+
+#### 2.1.2 Distribution of Sentiment Across Google and Apple
+
+<img width="971" height="580" alt="image" src="https://github.com/user-attachments/assets/83c41a1f-db48-4fd8-b31e-c42048372a6b" />
+
+#### 2.1.3 Word Cloud of Tweets
+
+<img width="792" height="431" alt="image" src="https://github.com/user-attachments/assets/fd08056f-61db-42aa-b800-c4bb6b9c1930" />
+
+#### 2.1.4 Classification Matrix of the Best Model
+
+<img width="632" height="475" alt="image" src="https://github.com/user-attachments/assets/5f4763d2-c14f-4f3d-bd30-64e511d3b170" />
+
 
 ## 3. Data Preprocessing
 
@@ -87,6 +109,8 @@ The models are evaluated using the following metrics:
 ### 5.2 Performance Results
 
 The models were evaluated on the test set, and their performances were compared. The results showed that the **LinearSVC** model performed the best in terms of F1-score, closely followed by **Logistic Regression**.
+
+The `LinearSVC` model was trained again with balanced classes and n-grams and achieved the best results across all three classes.
 
 SVM with N-grams and Balanced Classes Results:
 
